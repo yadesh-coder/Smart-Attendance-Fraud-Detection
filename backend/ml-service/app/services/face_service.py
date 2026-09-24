@@ -29,7 +29,8 @@ class FaceService:
     def get_ort_session(cls):
         if cls._ort_session is None:
             try:
-                model_path = r"C:\Users\Yadesh\.insightface\models\buffalo_sc\w600k_mbf.onnx"
+                from pathlib import Path
+                model_path = str(Path.home() / ".insightface" / "models" / "buffalo_sc" / "w600k_mbf.onnx")
                 if os.path.exists(model_path):
                     cls._ort_session = ort.InferenceSession(model_path, providers=['CPUExecutionProvider'])
                     cls._input_name = cls._ort_session.get_inputs()[0].name
