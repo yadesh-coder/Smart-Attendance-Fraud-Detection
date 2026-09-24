@@ -35,13 +35,13 @@ To run the complete platform locally, start the microservices and services in th
 9. **Location Service** (`backend/location-service`, Port `8088`)
 10. **Fraud Service** (`backend/fraud-service`, Port `8089`)
 11. **ML Service** (`backend/ml-service`, Port `8090`)
-12. **Frontend** (Vite, Port `5173`)
+12. **Frontend** (Vite, Port `5173` - `cd frontend && npm run dev`)
 
 ## Run Locally
 
 **Prerequisites:** Node.js (v18+), Java (v17+), Maven, Python (v3.10+), MySQL (v8.0+)
 
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
+1. Install frontend dependencies:
+   `cd frontend && npm install`
+2. Run the frontend app:
+   `cd frontend && npm run dev`
