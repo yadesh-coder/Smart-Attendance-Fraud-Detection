@@ -1,12 +1,9 @@
-name: Deploy Static Demo to GitHub Pages
+name: Deploy Smart Attendance Frontend to GitHub Pages
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'github-pages-demo/**'
-      - '.github/workflows/github-pages-demo.yml'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,13 +25,31 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build Application
+        env:
+          GITHUB_PAGES: 'true'
+          VITE_API_BASE_URL: 'http://localhost:8081'
+        run: |
+          cd frontend
+          npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Static Demo Artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'github-pages-demo'
+          path: 'frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
