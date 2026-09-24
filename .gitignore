@@ -1,0 +1,39 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+.env
+.env*
+!.env.example
+
+# Maven & Java Backend Build Artifacts
+target/
+.mvn/
+*.jar
+*.war
+.classpath
+.project
+.settings/
+
+# IDE / local project metadata
+.vscode/
+.antigravity/
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Local development / scratch files
+scratch/
+
+# Local database / generated files
+*.db
+*.db.*
+*.trace.db
+*.bak
+
+*.bak*

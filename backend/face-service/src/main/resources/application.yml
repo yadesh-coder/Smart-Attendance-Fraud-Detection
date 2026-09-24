@@ -1,0 +1,27 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: FACE-SERVICE
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+student:
+  service:
+    url: ${STUDENT_SERVICE_URL:http://localhost:8081/api/student/enrollment/face}
+
+jwt:
+  secret: "smart_attendance_fraud_detection_jwt_secret_key_32bytes_minimum"

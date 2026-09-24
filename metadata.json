@@ -1,0 +1,1 @@
+{"name":"Smart Attendance Fraud Detection","description":"A secure college attendance platform reducing proxy attendance via QR, Face, Geolocation, Device, and AI verification.","requestFramePermissions":["camera","geolocation"],"majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]}

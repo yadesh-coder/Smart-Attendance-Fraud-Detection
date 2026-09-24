@@ -1,0 +1,29 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: FRAUD-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/attendance_fraud_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: nathiya06
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+jwt:
+  secret: smart_attendance_fraud_detection_jwt_secret_key_32bytes_minimum

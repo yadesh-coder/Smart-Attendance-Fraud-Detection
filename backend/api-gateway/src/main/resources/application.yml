@@ -1,0 +1,136 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+              - "http://localhost:5173"
+              - "http://127.0.0.1:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "Authorization"
+              - "Content-Type"
+              - "Accept"
+              - "X-Requested-With"
+              - "Origin"
+              - "Access-Control-Request-Method"
+              - "Access-Control-Request-Headers"
+            allowCredentials: true
+
+      routes:
+
+        # =========================
+        # AUTH SERVICE
+        # =========================
+        - id: auth-service-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/auth/**
+
+        # =========================
+        # FACULTY & ADMIN SERVICE
+        # =========================
+        - id: faculty-service-route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/departments,/api/departments/**,/api/faculty/profile,/api/admin,/api/admin/**,/api/faculty/subjects,/api/faculty/subjects/**,/api/faculty/fraud-alerts,/api/faculty/fraud-alerts/**,/api/faculty/analytics,/api/faculty/analytics/**
+
+        # =========================
+        # STUDENT SERVICE
+        # =========================
+        - id: student-service-route
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/faculty/students,/api/faculty/students/**,/api/student/profile,/api/student/enrollment/**
+
+        # =========================
+        # SUBJECT SERVICE
+        # =========================
+        - id: subject-service-route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/subjects/**
+
+        # =========================
+        # ATTENDANCE SERVICE
+        # =========================
+        - id: attendance-service-route
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/faculty/attendance/**,/api/student/attendance/**,/api/attendance/**
+
+        # =========================
+        # VERIFICATION SERVICE
+        # =========================
+        - id: verification-service-route
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/verification/**
+
+        # =========================
+        # FRAUD SERVICE
+        # =========================
+        - id: fraud-service-route
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/fraud/**
+
+        # =========================
+        # FACE SERVICE
+        # =========================
+        - id: face-service-route
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/student/face/**
+
+        # =========================
+        # DEVICE SERVICE
+        # =========================
+        - id: device-service-route
+          uri: http://localhost:8087
+          predicates:
+            - Path=/api/student/device/**
+
+        # =========================
+        # LOCATION SERVICE
+        # =========================
+        - id: location-service-route
+          uri: http://localhost:8088
+          predicates:
+            - Path=/api/student/location/**
+
+        # =========================
+        # ML SERVICE
+        # =========================
+        - id: ml-service-route
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/ml/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
