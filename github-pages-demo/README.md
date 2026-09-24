@@ -1,5 +1,7 @@
 # Smart Attendance Fraud Detection - Static Demo Website
 
+[![Deploy Static Demo to GitHub Pages](https://github.com/yadesh-coder/Smart-Attendance-Fraud-Detection/actions/workflows/github-pages-demo.yml/badge.svg)](https://github.com/yadesh-coder/Smart-Attendance-Fraud-Detection/actions/workflows/github-pages-demo.yml)
+
 This directory contains the **standalone static demonstration website** for the **Smart Attendance Fraud Detection** project.
 
 ## Live GitHub Pages Demo URL
