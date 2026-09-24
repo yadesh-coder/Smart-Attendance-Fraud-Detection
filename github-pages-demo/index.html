@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Attendance Fraud Detection - Static Demo</title>
+  <meta name="description" content="Standalone static demonstration website for Smart Attendance Fraud Detection platform.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DEMO NOTICE BANNER -->
+  <div class="demo-top-banner">
+    <span class="badge">STATIC DEMO WEBPAGE</span>
+    <span>NO REAL BACKEND &bull; NO DATABASE &bull; NO REAL DATA STORED OR PROCESSED</span>
+  </div>
+
+  <!-- NAVIGATION NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="brand-icon">🛡️</div>
+        <div>
+          <div class="brand-title">Smart Attendance</div>
+          <div class="brand-sub">Fraud Guard Demo</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#demo">Demo Console</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <a href="#demo" class="btn-demo-action">⚡ Launch Demo</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="home" class="hero">
+    <div class="hero-tag">
+      <span>🤖 Multi-Signal Attendance & Anti-Proxy Verification Engine</span>
+    </div>
+
+    <h1 class="hero-title">
+      Fraud-Resistant Attendance Powered by Multi-Signal Intelligence
+    </h1>
+
+    <p class="hero-sub">
+      Eliminate proxy attendance and unauthorized check-ins. Combining dynamic session QR codes, biometric face verification, privacy-preserving device hardware hashes, location geofencing, and cross-signal AI fraud detection into a single pipeline.
+    </p>
+
+    <div class="hero-badges">
+      <div class="signal-chip chip-qr">📱 Dynamic QR Sessions</div>
+      <div class="signal-chip chip-face">👤 Face Verification</div>
+      <div class="signal-chip chip-device">🔑 Device Fingerprinting</div>
+      <div class="signal-chip chip-location">📍 Geofencing Radius</div>
+      <div class="signal-chip chip-ml">🧠 AI Anomaly Detection</div>
+    </div>
+
+    <div style="margin-top: 1rem;">
+      <a href="#demo" class="btn-demo-action" style="padding: 0.85rem 2rem; font-size: 1rem;">
+        ▶ Try Interactive Simulation Console
+      </a>
+    </div>
+  </header>
+
+  <!-- FEATURES SECTION -->
+  <section id="features">
+    <div class="section-header">
+      <div class="section-subtitle">Platform Capabilities</div>
+      <h2 class="section-title">Key Security & Verification Signals</h2>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Dynamic QR Sessions</h3>
+        <p>Cryptographically unique, time-limited QR tokens regenerated per session to eliminate static screenshot sharing among students.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">👤</div>
+        <h3>Biometric Face Match</h3>
+        <p>ArcFace neural network embedding match confirming physical identity of the enrolled student with high confidence.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">🔑</div>
+        <h3>Device Fingerprinting</h3>
+        <p>Privacy-preserving SHA-256 hardware hash validation binding attendance submissions to trusted mobile devices.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3>Geolocation Radius Check</h3>
+        <p>GPS coordinates and Haversine distance validation verifying student physical presence within designated classroom bounds.</p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Isolation Forest Anomaly ML</h3>
+        <p>Machine Learning anomaly detection algorithm calculating risk scores to flag suspicious proxy attempts in real time.</p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="feature-card">
+        <div class="feature-icon">🏛️</div>
+        <h3>Role-Based Workspaces</h3>
+        <p>Tailored access controls for Institutional Administrators, Course Faculty, and Enrolled Students.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW SECTION -->
+  <section id="workflow" style="background: rgba(17, 24, 39, 0.4); border-y: 1px solid var(--border-color);">
+    <div class="section-header">
+      <div class="section-subtitle">Verification Pipeline</div>
+      <h2 class="section-title">5-Step Attendance Verification Flow</h2>
+    </div>
+
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Faculty Launch</div>
+        <div class="step-desc">Instructor creates active session & generates dynamic QR code.</div>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Student Scan</div>
+        <div class="step-desc">Authenticated student scans active session QR token via mobile web app.</div>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">03</div>
+        <div class="step-title">Biometric & GPS</div>
+        <div class="step-desc">Face embedding match & GPS classroom radius check execute concurrently.</div>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">04</div>
+        <div class="step-title">Device & AI Risk</div>
+        <div class="step-desc">Hardware fingerprint & Isolation Forest ML model evaluate multi-signal vector.</div>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">05</div>
+        <div class="step-title">Final Decision</div>
+        <div class="step-desc">Attendance recorded as PRESENT or flagged in real-time Fraud Log.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO CONSOLE -->
+  <section id="demo">
+    <div class="section-header">
+      <div class="section-subtitle">Live Simulation Sandbox</div>
+      <h2 class="section-title">Interactive Multi-Signal Verification Demo</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+        Click the simulation controls below to trigger client-side verification signals and watch the live telemetry console.
+      </p>
+    </div>
+
+    <div class="demo-container">
+      <!-- Controls -->
+      <div class="demo-controls">
+        <!-- Role selector -->
+        <div class="control-group">
+          <h4>
+            <span>1. Select Demo Workspace Role</span>
+            <span style="font-size: 0.75rem; color: var(--accent-cyan);">Client-side switch</span>
+          </h4>
+          <div class="role-switch">
+            <button class="role-btn active" data-role="STUDENT">STUDENT</button>
+            <button class="role-btn" data-role="FACULTY">FACULTY</button>
+            <button class="role-btn" data-role="ADMIN">ADMIN</button>
+          </div>
+        </div>
+
+        <!-- Simulation Buttons -->
+        <div class="control-group" style="display: flex; flex-direction: column; gap: 0.65rem;">
+          <h4>2. Trigger Verification Signals</h4>
+          <button id="btn-sim-login" class="btn-sim">
+            <span>🔑 Demo Login</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate Auth</span>
+          </button>
+          <button id="btn-sim-qr" class="btn-sim">
+            <span>📱 Generate Session QR Token</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate QR</span>
+          </button>
+          <button id="btn-sim-face" class="btn-sim">
+            <span>👤 Run Face AI Biometric Match</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate ArcFace</span>
+          </button>
+          <button id="btn-sim-location" class="btn-sim">
+            <span>📍 Query GPS Geofence Radius</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate GPS</span>
+          </button>
+          <button id="btn-sim-device" class="btn-sim">
+            <span>🔑 Compute Hardware Fingerprint</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate Device Hash</span>
+          </button>
+          <button id="btn-sim-fraud" class="btn-sim">
+            <span>🧠 Evaluate Isolation Forest ML Risk</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Simulate ML Model</span>
+          </button>
+
+          <button id="btn-sim-submit" class="btn-sim btn-sim-primary" style="margin-top: 0.5rem;">
+            <span>✅ Submit Demo Attendance</span>
+            <span>Finalize Record</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Telemetry Screen -->
+      <div class="demo-screen">
+        <div class="screen-header">
+          <div class="screen-title">Live Telemetry & Signals</div>
+          <div style="display: flex; items-center; gap: 0.5rem;">
+            <div class="status-dot"></div>
+            <span style="font-size: 0.75rem; color: #10b981; font-weight: 700;">LIVE SIMULATOR</span>
+          </div>
+        </div>
+
+        <div class="telemetry-grid">
+          <div class="telemetry-box">
+            <label>DYNAMIC QR TOKEN</label>
+            <val id="val-qr">QR-SESSION-8F3K2A</val>
+          </div>
+          <div class="telemetry-box">
+            <label>FACE AI MATCH</label>
+            <val id="val-face">98.4% Match (PASSED)</val>
+          </div>
+          <div class="telemetry-box">
+            <label>GEOFENCE DISTANCE</label>
+            <val id="val-location">5.2m Radius (PASSED)</val>
+          </div>
+          <div class="telemetry-box">
+            <label>DEVICE HASH</label>
+            <val id="val-device">HW-98F3A1C2 (TRUSTED)</val>
+          </div>
+          <div class="telemetry-box" style="grid-column: span 2;">
+            <label>ML ANOMALY RISK SCORE</label>
+            <val id="val-anomaly">Anomaly: 0.034 (LOW RISK - CLEAN)</val>
+          </div>
+          <div class="telemetry-box" style="grid-column: span 2; border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">
+            <label style="color: #6ee7b7;">FINAL ATTENDANCE STATUS</label>
+            <val id="val-status" style="color: #34d399; font-size: 0.95rem;">READY FOR SIMULATION</val>
+          </div>
+        </div>
+
+        <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; margin-top: 0.5rem;">
+          SYSTEM CONSOLE LOGS:
+        </div>
+
+        <div id="console-output" class="console-output">
+          <div class="console-line info">[SYSTEM] Smart Attendance Fraud Detection Static Demo Engine initialized.</div>
+          <div class="console-line success">[SYSTEM] Ready for interactive multi-signal simulation. Click any button to test signals.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-subtitle">System Architecture</div>
+      <h2 class="section-title">About the Project</h2>
+    </div>
+
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; max-width: 900px; margin: 0 auto;">
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.7;">
+        The <strong>Smart Attendance Fraud Detection Platform</strong> is a complete microservice-based institutional solution engineered to eliminate attendance proxies and biometric fraud.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Java Spring Boot Suite</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Eureka Server, API Gateway, Auth, Faculty, Student, Attendance, Face, Device, Location, and Fraud microservices.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Python FastAPI & ML</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Isolation Forest anomaly detection model evaluating multi-signal attendance vectors in real time.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">React 18 & Vite Frontend</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Modern, responsive workspace dashboards for Administrators, Faculty, and Students.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+        <a href="https://github.com/yadesh-coder/Smart-Attendance-Fraud-Detection" target="_blank" class="btn-demo-action">
+          ⭐ View GitHub Repository
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.1rem;">
+        <span>🛡️</span> Smart Attendance Fraud Detection
+      </div>
+
+      <p class="footer-sub">
+        This webpage is a <strong>standalone static demonstration website</strong> hosted on GitHub Pages. No backend microservices or databases are connected to this static demo.
+      </p>
+
+      <div style="font-size: 0.75rem; color: var(--text-muted);">
+        Smart Attendance Platform &copy; 2026 Yadesh M. Open-source MIT License.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
