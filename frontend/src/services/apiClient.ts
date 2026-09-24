@@ -33,10 +33,10 @@ function getMockResponse(endpoint: string, method: string, body?: any): any {
       mockRole = 'ADMIN';
       mockName = 'System Administrator';
       mockEmail = 'admin@college.edu';
-    } else if (email.includes('faculty')) {
+    } else if (email.includes('faculty') || email.includes('vishal') || email.includes('prof') || email.includes('teacher')) {
       mockRole = 'FACULTY';
       mockName = 'Dr. Sarah Connor';
-      mockEmail = 'faculty@college.edu';
+      mockEmail = body?.email || 'faculty@college.edu';
     }
 
     const mockUser = {

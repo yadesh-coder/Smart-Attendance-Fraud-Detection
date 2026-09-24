@@ -47,10 +47,10 @@ export const authService = {
           mockRole = 'ADMIN';
           mockName = 'System Administrator';
           mockEmail = 'admin@college.edu';
-        } else if (email.includes('faculty')) {
+        } else if (email.includes('faculty') || email.includes('vishal') || email.includes('prof') || email.includes('teacher')) {
           mockRole = 'FACULTY';
           mockName = 'Dr. Sarah Connor';
-          mockEmail = 'faculty@college.edu';
+          mockEmail = credentials.email || 'faculty@college.edu';
         }
 
         const mockUser: User = {

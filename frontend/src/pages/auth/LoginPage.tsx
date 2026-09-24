@@ -54,7 +54,7 @@ const ROLES: RoleOption[] = [
     title: 'Faculty Login',
     subtitle: 'Manage assigned subjects, broadcast live sessions, and view student attendance.',
     buttonText: 'Login as Faculty',
-    demoEmail: 'vishal@college.edu',
+    demoEmail: 'faculty@college.edu',
     description: 'Manage students, subjects, and attendance sessions.',
     icon: BookOpen,
     accentColor: 'emerald',
